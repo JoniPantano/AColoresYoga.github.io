@@ -1,0 +1,56 @@
+/* =====================================================
+   FONT FACE DEFINITIONS – SEGÚN ARCHIVOS DISPONIBLES
+   ===================================================== */
+
+/* CORMORANT GARAMOND (solo Bold disponible) */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Cormorant_Garamond/transfonter.org-20260116-071709/CormorantGaramond-Bold.woff2') format('woff2');
+}
+
+
+/* LATO (Regular + Bold disponibles) */
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Lato/transfonter.org-20260116-071908/Lato-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Lato/transfonter.org-20260116-071908/Lato-Bold.woff2') format('woff2');
+}
+
+
+/* =====================================================
+   BOOTSTRAP FONT OVERRIDES
+   ===================================================== */
+
+:root {
+  --bs-font-sans-serif: 'Lato', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+}
+
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+strong, b {
+  font-weight: 700;
+}
