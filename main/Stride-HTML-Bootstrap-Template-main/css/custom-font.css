@@ -1,8 +1,5 @@
-/* =====================================================
-   FONT FACE DEFINITIONS – SEGÚN ARCHIVOS DISPONIBLES
-   ===================================================== */
 
-/* CORMORANT GARAMOND (solo Bold disponible) */
+/* CORMORANT GARAMOND */
 
 @font-face {
   font-family: 'Cormorant Garamond';
@@ -13,7 +10,7 @@
 }
 
 
-/* LATO (Regular + Bold disponibles) */
+/* LATO */
 
 @font-face {
   font-family: 'Lato';
@@ -53,4 +50,32 @@ h1, h2, h3, h4, h5, h6,
 }
 strong, b {
   font-weight: 700;
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+
+#LuciaPhoto {
+  background-position: center;
+  background-size: cover;
+}
+
+/* =====================================================
+   Background Color
+    ===================================================== */
+   #top {
+      background-color: #ffffff
+    }
+
+  /* =====================================================
+   Font Colors  
+    ===================================================== */
+body,header,footer,nav {
+  color: #513f36;
+}
+.navbar,
+.navbar .nav-link,
+.navbar {
+  color: #513f36;
 }

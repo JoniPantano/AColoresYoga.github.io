@@ -1018,7 +1018,9 @@ progress {
     width: 58.33333%; }
   .col-lg-8 {
     flex: 0 0 auto;
-    width: 66.66667%; }
+    width: 50%; 
+    height: 70%;
+  }
   .col-lg-9 {
     flex: 0 0 auto;
     width: 75%; }
@@ -5898,7 +5900,7 @@ textarea.form-control-lg {
   height: 75% !important; }
 
 .h-100 {
-  height: 100% !important; }
+  height: 70% !important; }
 
 .h-auto {
   height: auto !important; }
