@@ -79,3 +79,141 @@ body,header,footer,nav {
 .navbar {
   color: #513f36;
 }
+  /* =====================================================
+   LOGO
+    ===================================================== */
+.navbar-logo {
+  height: 98px;
+  width: auto;
+}
+.btn-animate:hover {
+  animation: bounce 0.9s;
+}
+.navbar-logo:hover {
+  animation: pulse 0.7s;
+}
+
+/* =====================================================
+   ABOUT US SECTION
+    ===================================================== */
+
+   #front-angle {
+  background-position: center;
+  background-position-x: 50px;
+   background-position-y: -10px;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+/* =====================================================
+  Slider SECTION
+    ===================================================== */
+
+#photoSlider {
+  position: relative; 
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-img {
+  max-height: 520px;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+
+/* =====================================================
+   Slider Botones SECTION
+    ===================================================== */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none; /* apagamos el SVG roto de Bootstrap */
+}
+
+.carousel-control-prev::before,
+.carousel-control-next::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+.carousel-control-prev {
+  left: -32px;
+}
+.carousel-control-next {
+  right: -32px;
+}
+.carousel-control-prev::before,
+.carousel-control-next::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.carousel-control-prev::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-control-next::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* =====================================================
+   Botones responsive
+    ===================================================== */
+
+@media (min-width: 992px) {
+  .carousel-control-prev { left: -45px; }
+  .carousel-control-next { right: -45px; }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .carousel-control-prev { left: 8px; }
+  .carousel-control-next { right: 8px; }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-control-prev { left: 6px; }
+  .carousel-control-next { right: 6px; }
+}
