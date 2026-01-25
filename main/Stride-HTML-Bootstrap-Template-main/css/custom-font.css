@@ -1,5 +1,14 @@
 
+
 /* CORMORANT GARAMOND */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/Cormorant_Garamond/transfonter.org-20260116-071709/CormorantGaramond-Regular.woff2') format('woff2');
+}
 
 @font-face {
   font-family: 'Cormorant Garamond';
@@ -8,7 +17,6 @@
   font-display: swap;
   src: url('../fonts/Cormorant_Garamond/transfonter.org-20260116-071709/CormorantGaramond-Bold.woff2') format('woff2');
 }
-
 
 /* LATO */
 
@@ -19,15 +27,6 @@
   font-display: swap;
   src: url('../fonts/Lato/transfonter.org-20260116-071908/Lato-Regular.woff2') format('woff2');
 }
-
-@font-face {
-  font-family: 'Lato';
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url('../fonts/Lato/transfonter.org-20260116-071908/Lato-Bold.woff2') format('woff2');
-}
-
 
 /* =====================================================
    BOOTSTRAP FONT OVERRIDES
@@ -46,10 +45,7 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-}
-strong, b {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* =====================================================
@@ -88,9 +84,11 @@ body,header,footer,nav {
 }
 .btn-animate:hover {
   animation: bounce 0.9s;
+  animation-iteration-count: infinite;
 }
 .navbar-logo:hover {
   animation: pulse 0.7s;
+   animation-iteration-count: infinite;
 }
 
 /* =====================================================
@@ -149,7 +147,7 @@ body,header,footer,nav {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  display: none; /* apagamos el SVG roto de Bootstrap */
+  display: none; 
 }
 
 .carousel-control-prev::before,
@@ -216,4 +214,16 @@ body,header,footer,nav {
 
   .carousel-control-prev { left: 6px; }
   .carousel-control-next { right: 6px; }
+}
+/* =====================================================
+   Font Strong tag
+    ===================================================== */
+    h1 strong,
+    h2 strong,
+    h3 strong,
+    h4 strong,
+    h5 strong,
+    h6 strong,
+    p strong {
+      font-weight: 700;
 }
