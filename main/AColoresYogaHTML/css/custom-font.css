@@ -43,7 +43,7 @@
    ===================================================== */
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, p {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
 }
@@ -90,7 +90,78 @@ body,header,footer,nav {
   animation: pulse 0.7s;
    animation-iteration-count: infinite;
 }
+/* =====================================================
+   MARCO SIMBÓLICO – TEXTO CENTRAL
+   ===================================================== */
 
+
+.quote-frame {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3.5rem 3rem;
+  position: relative;
+  text-align: center;
+  color: #513f36;
+}
+
+.quote-frame p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+
+.quote-frame::before,
+.quote-frame::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background-color: rgba(81, 63, 54, 0.55);
+}
+
+.quote-frame::before {
+  top: 0;
+}
+
+.quote-frame::after {
+  bottom: 0;
+}
+
+.quote-frame .frame-side {
+  position: absolute;
+  width: 2px;
+  height: 40%;
+  background-color: rgba(81, 63, 54, 0.35);
+  top: 30%;
+}
+
+.quote-frame .frame-left {
+  left: 0;
+}
+
+.quote-frame .frame-right {
+  right: 0;
+}
+.quote-frame .frame-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 1.8rem auto;
+  background-color: #513f36;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .quote-frame {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .quote-frame .frame-side {
+    height: 30%;
+  }
+}
 /* =====================================================
    ABOUT US SECTION
     ===================================================== */
@@ -572,4 +643,29 @@ body,header,footer,nav {
 }
 .plan-featured{
   animation: pulse 2s infinite;
+}
+#pagonacional{
+  padding-top: 3em;
+}
+/* =====================================================
+   DIVISOR 
+   ===================================================== */
+.divider-organic {
+  width: 160px;
+  height: 1px;
+  background-color: #513f36;
+  position: relative;
+  opacity: 0.6;
+}
+
+.divider-organic::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #513f36;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
