@@ -43,7 +43,7 @@
    ===================================================== */
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6, p {
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
 }
@@ -339,7 +339,7 @@ body,header,footer,nav {
 
 
 .accordion-item {
-  background-color: #eceada;
+  background-color: #f3f3f09c;
   border-radius: 12px;
   margin-bottom: 1rem;
   border: 1px solid rgba(160, 35, 35, 0.08);
@@ -357,8 +357,8 @@ body,header,footer,nav {
 .accordion-button {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.25rem;
-  background-color: #7c7c8d;
-  color: #000000;
+  background-color: #d7d7ea;
+  color: #41403d;
   padding: 1.25rem 1.5rem;
   transition: all 0.4s ease;
 }
@@ -601,7 +601,7 @@ body,header,footer,nav {
   margin-bottom: 0.5rem;
 }
 .plan-featured {
-  border: 2px solid #b58c5a;
+  border: 2px solid #d6a76e;
   background-color: #fdf9f4;
   position: relative;
   transform: scale(1.05);
