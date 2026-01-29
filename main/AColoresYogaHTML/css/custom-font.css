@@ -56,6 +56,17 @@ h1, h2, h3, h4, h5, h6,
   background-position: center;
   background-size: cover;
 }
+.title-hero {
+  color: #513f36;
+}
+@media (max-width: 575px) {
+  .quote-frame,
+  .quote-frame h1,
+  .quote-frame p {
+    color: #272424;
+    background-color: #7c7c8d48;
+  }
+}
 
 /* =====================================================
    Background Color
@@ -161,6 +172,19 @@ body,header,footer,nav {
   .quote-frame .frame-side {
     height: 30%;
   }
+}
+
+.guarantee-card {
+  background: #ffffff;
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.guarantee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  background-color: #d7d7ea;
 }
 /* =====================================================
    ABOUT US SECTION
