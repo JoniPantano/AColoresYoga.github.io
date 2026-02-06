@@ -59,14 +59,7 @@ h1, h2, h3, h4, h5, h6,
 .title-hero {
   color: #513f36;
 }
-@media (max-width: 575px) {
-  .quote-frame,
-  .quote-frame h1,
-  .quote-frame p {
-    color: #272424;
-    background-color: #7c7c8d48;
-  }
-}
+
 
 /* =====================================================
    Background Color
@@ -187,6 +180,34 @@ body,header,footer,nav {
   background-color: #d7d7ea;
 }
 /* =====================================================
+ HERO RESPONSIVE
+    ===================================================== */
+@media (max-width: 991px) {
+
+  /* Contenedor del texto */
+  .quote-frame {
+    position: relative;
+    padding: 2.5rem 2rem;
+    background: rgba(0, 0, 0, 0.45); /* overlay elegante */
+    backdrop-filter: blur(2px); /* sutil, moderno */
+    border-radius: 1rem;
+  }
+
+  /* Texto */
+  .quote-frame h1,
+  .quote-frame p {
+    color: #ffffff;
+  }
+
+  .quote-frame p strong {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+}
+
+
+/* =====================================================
    ABOUT US SECTION
     ===================================================== */
 
@@ -200,7 +221,6 @@ body,header,footer,nav {
 /* =====================================================
   Slider SECTION
     ===================================================== */
-
 #photoSlider {
   position: relative; 
   max-width: 420px;
@@ -234,7 +254,7 @@ body,header,footer,nav {
   overflow: hidden;
 }
 
-/* Quitamos transform del item */
+
 .carousel-item {
   opacity: 0;
   transition: opacity 0.8s ease;
@@ -244,17 +264,24 @@ body,header,footer,nav {
   opacity: 1;
 }
 
-/* Animamos SOLO la imagen */
+
 .carousel-item img {
   transform: scale(1.06);
   transition: transform 1.2s ease;
+    height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
-/* Cuando está activo, vuelve a escala normal */
 .carousel-item.active img {
   transform: scale(1);
 }
 
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 75vh;
+}
 
 /* =====================================================
    Slider Botones SECTION
@@ -264,9 +291,10 @@ body,header,footer,nav {
   position: absolute;
   width: 44px;
   height: 44px;
-  top: 50%;
+  top: 40%;
+  bottom: auto;
   transform: translateY(-50%);
-  background-color: #7c7c8d;
+  background-color: #18181a;
   border-radius: 50%;
   opacity: 1;
   transform: none !important;
@@ -287,7 +315,6 @@ body,header,footer,nav {
   border-right: 2px solid #fff;
   top: 50%;
   left: 50%;
-  transform-origin: center;
 }
 .carousel-control-prev {
   left: -32px;
@@ -305,7 +332,6 @@ body,header,footer,nav {
   border-right: 2px solid #fff;
   top: 50%;
   left: 50%;
-  transform-origin: center;
 }
 
 .carousel-control-prev::before {
@@ -434,7 +460,6 @@ body,header,footer,nav {
   }
 }
 
-/* Solo en estado cerrado */
 .accordion-button.collapsed {
   animation: softPulse 4s ease-in-out infinite;
 }
@@ -520,7 +545,7 @@ body,header,footer,nav {
   font-size: 4rem;
   animation-delay: 6s;
 }
-/* Animación */
+
 @keyframes floatVisible {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -538,7 +563,7 @@ body,header,footer,nav {
     transform: translate(0, 0) rotate(0deg);
   }
 }
-/* Mobile */
+
 @media (max-width: 768px) {
   .bg-icon {
     font-size: 3rem;
@@ -718,7 +743,7 @@ body,header,footer,nav {
    ===================================================== */
 
 .disclaimer-section {
-  background-color: #f1eff6; 
+  background-color: #f1eff6; }
 
 .disclaimer-card {
   background: rgba(255, 255, 255, 0.85);
