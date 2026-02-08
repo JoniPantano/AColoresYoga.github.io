@@ -59,7 +59,12 @@ h1, h2, h3, h4, h5, h6,
 .title-hero {
   color: #513f36;
 }
-
+@media (max-width: 1200px) 
+{
+  .navbar {
+  padding-right: clamp(1rem, 4vw, 4rem);
+}
+  }
 
 /* =====================================================
    Background Color
@@ -741,7 +746,7 @@ body,header,footer,nav {
 @media (min-width: 1200px) {
     .h3, h3
  { 
-    font-size: 1.40rem;
+    font-size: 1.50rem;
     }
 /* =====================================================
    DISCLAIMER 
