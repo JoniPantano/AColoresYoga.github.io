@@ -28,6 +28,15 @@
   src: url('../fonts/Lato/transfonter.org-20260116-071908/Lato-Regular.woff2') format('woff2');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 991px) {
+  #top {
+    overflow: visible;
+  }
+}
 /* =====================================================
    BOOTSTRAP FONT OVERRIDES
    ===================================================== */
@@ -49,6 +58,13 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* =====================================================
+   BODY
+   ===================================================== */
+   body {
+    padding-top: 3em;
+  }
+
+/* =====================================================
    HERO SECTION
    ===================================================== */
 
@@ -56,15 +72,21 @@ h1, h2, h3, h4, h5, h6,
   background-position: center;
   background-size: cover;
 }
+@media (min-width: 1330px) and (max-width: 2500px) {
+  #LuciaPhoto {
+     transform: scale(0.80);
+  }
+}
+@media (min-width: 1200px) {
+  #LuciaPhoto {
+    width: 55%;
+    padding-right: 10em;
+    transform: scale(0.65);
+  }
+}
 .title-hero {
   color: #513f36;
 }
-@media (max-width: 1200px) 
-{
-  .navbar {
-  padding-right: clamp(1rem, 4vw, 4rem);
-}
-  }
 
 /* =====================================================
    Background Color
@@ -80,9 +102,16 @@ body,header,footer,nav {
   color: #513f36;
 }
 .navbar,
-.navbar .nav-link,
-.navbar {
+.navbar .nav-link {
   color: #513f36;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  color: #4b3f35;
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: #221c16;
+  animation: softPulse 2s ease-in-out infinite;
 }
   /* =====================================================
    LOGO

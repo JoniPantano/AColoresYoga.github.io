@@ -72,11 +72,11 @@
       <div class="w-100 overflow-hidden bg-gray-100" id="top">
   
 <div class="container position-relative">
-  <div class="col-12 col-lg-6 mt-0 h-100 position-absolute top-0 end-0 bg-cover" id="LuciaPhoto" data-aos="fade-left" style="background-image: url(img/interior11.jpg);">  
+  <div class="col-12 col-lg-4 col-xxl-8 h-100 position-absolute  end-0 bg-cover" id="LuciaPhoto" data-aos="fade-left" style="background-image: url(img/interior11.jpg);">  
   </div>
     <div class="row">
 
-<div class="col-lg-5 py-vh-6 position-relative" data-aos="fade-right">
+<div class="col-lg-6 py-vh-6 position-relative" data-aos="fade-right">
   <div class="quote-frame" data-aos="fade-up">
   <h1 class="display-1 fw-bold mt-5 title-hero">
   Dejá de sostener el mundo y recuperá el mando de tu calma.
@@ -693,8 +693,20 @@ abonar en pesos argentinos con total tranquilidad.✨🌈</h4>
 
     console.log(scrollpos)
   })
+ document.querySelectorAll('.navbar .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    if (navbarCollapse.classList.contains('show')) {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+      bsCollapse.hide();
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+  });
+});
 </script>
 
   </body>
 </html>
-<div class="container text-center py-3 small">Made by <a href="#" class="link-fancy" target="_blank">Jonathan Pantano</a>
+<div class="container text-center py-3 small">Made by <a href="https://www.instagram.com/jonipantano" class="link-fancy" target="_blank">Jonathan Pantano</a>
