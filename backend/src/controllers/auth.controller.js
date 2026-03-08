@@ -5,8 +5,7 @@ const { signAccessToken } = require("../utils/jwt");
 
 const registerSchema = z.object({
   email: z.string().email(),
-  password: z.string().min(8),
-  role: z.enum(["ADMIN", "ALUMNA"]).optional()
+  password: z.string().min(8)
 });
 
 const loginSchema = z.object({
@@ -30,7 +29,7 @@ exports.register = async (req, res, next) => {
       data: {
         email: data.email,
         passwordHash,
-        role: data.role || "ALUMNA"
+        role: "ALUMNA"
       },
       select: {
         id: true,

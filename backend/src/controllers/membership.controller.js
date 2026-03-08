@@ -128,13 +128,19 @@ exports.myMemberships = async (req, res, next) => {
 
 exports.myAccessStatus = async (req, res, next) => {
   try {
-    const membership = await prisma.membership.findFirst({
+    const memberships = await prisma.membership.findMany({
       where: {
         userId: req.user.id,
         status: { in: ["ACTIVE", "SUSPENDED", "EXPIRED", "CANCELLED"] }
       },
       orderBy: { endDate: "desc" }
     });
+
+    const membership =
+      memberships.find((item) => {
+        const { hasAccess } = hasAccessFromMembership(item);
+        return hasAccess;
+      }) || memberships[0] || null;
 
     const result = hasAccessFromMembership(membership);
 
